@@ -29,6 +29,8 @@ function newBook(book) {
                         </div>
                     </div>
                     <button class="button button-buy is-success is-fullwidth">Comprar</button>
+					<br>
+                    <button class="button button-search is-success is-fullwidth">Pesquisar Livro</button>
                 </div>
             </div>
         </div>`;
@@ -79,6 +81,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.querySelectorAll('.button-buy').forEach((btn) => {
                     btn.addEventListener('click', (e) => {
                         swal('Compra de livro', 'Sua compra foi realizada com sucesso', 'success');
+                    });
+                });
+				
+                document.querySelectorAll('.button-search').forEach((btn) => {
+                    btn.addEventListener('click', (e) => {
+                        swal('Carregando pesquisa', 'Por favor aguarde ...', 'info');
                     });
                 });
             }
